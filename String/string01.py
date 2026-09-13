@@ -53,25 +53,33 @@ def expression_matter(a,b,c):
 def count_sheep(sheepes):
 # Solution 1
     # Sheep counter variable
-    #count = 0
+    count = 0
     # Check each element 
-    #for sheep in sheepes:
+    for sheep in sheepes:
     # If the sheep is in position (True), the count variable increases by 1
-        #if sheep == True:
-            #count += 1
+        if sheep == True:
+            count += 1
     # If the sheep is not in position (False, null, underfined), the count variable equals 0
-        #else:
-            #count += 0
-    #return count 
+        else:
+            count += 0
+    return count 
 
 # Solution 2
-    return sheepes.count(True)
+    #return sheepes.count(True)
 # Test case
-
+"""
 print(count_sheep([True,  True,  True,  False,
   True,  True,  True,  True ,
   True,  False, True,  False,
   True,  False, False, True ,
   True,  True,  True,  True ,
   False, False, True,  True]))
-
+"""
+# Exercise 5: Sum Mixed Array
+def sum_mix(arr):
+    result = 0
+    for number in arr:
+        result += int(number)
+    return result
+        
+print(sum_mix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']))
