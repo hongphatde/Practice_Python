@@ -138,7 +138,7 @@ def reverse_words(sentence):
 """
 
 # Test case
-print(reverse_words("The greatest victory is that which requires no battle"))
+#print(reverse_words("The greatest victory is that which requires no battle"))
 
 # Exercise 8: Beginner Series #4 Cockroach
    # Exercise: exchange km/h to cm/s of Cockroach's speed
@@ -146,25 +146,119 @@ def cockroach_speech(speed):
     return speed // 0.036
 
 # Test case
-print(cockroach_speech(1.08))
-print(cockroach_speech(2.7781687862099695))
-print(cockroach_speech(0.9353327640357478))
+#print(cockroach_speech(1.08))
+#print(cockroach_speech(2.7781687862099695))
+#print(cockroach_speech(0.9353327640357478))
 
 # Exercise 9: Remove the minimum
 def remove_minimum(numbers):
+# Solution 1
+
     # Return null list, if list don't have value
     if not numbers:
         return []
-   
+    # Find minimum value in numbers's variable
+    minimum = min(numbers)
+    # Set the index for the smallest number.
+    index = numbers.index(minimum)
+    # Return list new, don't mutable original list
+    return numbers[:index] + numbers[index + 1:]
+
+# Solution 2: Use enumerate() method
+"""
+    # Return null list, if list don't have value
+    if not numbers:
+        return []
+    # Receive value of numbers's iterable 
     minimun_value = numbers[0]
+    # Receive index of iterable
     minimun_index = 0
-    # Loop numbers list with iterable, number 
-    for iterable, number in enumerate(numbers):
+    # Loop numbers list with index, number 
+    for index , number in enumerate(numbers):
         if number < minimun_value:
             minimun_value = number
-            minimun_index = iterable
+            minimun_index = index 
     return numbers[:minimun_index] + numbers[minimun_index + 1:]
+"""
+# Test case
+#print(remove_minimum([128, 374, 67, 398, 146, 60]))
+#print(remove_minimum([304,153, 262, 28]))
+#print(remove_minimum([192, 312]))
 
-print(remove_minimum([128, 374, 67, 398, 146, 60]))
-print(remove_minimum([304,153, 262, 28]))
-print(remove_minimum([192, 312]))
+# Exercise 10: Subtract the sum
+def subtract_sum(numbers):
+    
+    fruits = {1: 'kiwi', 2: 'pear', 3: 'kiwi', 4: 'banana', 5: 'melon', 6: 'banana', 7: 'melon',
+        8: 'pineapple', 9: 'apple', 10: 'pineapple', 11: 'cucumber', 12: 'pineapple',
+        13: 'cucumber', 14: 'orange', 15: 'grape', 16: 'orange', 17: 'grape', 18: 'apple',
+        19: 'grape', 20: 'cherry', 21: 'pear', 22: 'cherry', 23: 'pear', 24: 'kiwi',
+        25: 'banana', 26: 'kiwi', 27: 'apple', 28: 'melon', 29: 'banana', 30: 'melon',
+        31: 'pineapple', 32: 'melon', 33: 'pineapple', 34: 'cucumber', 35: 'orange',
+        36: 'apple', 37: 'orange', 38: 'grape', 39: 'orange', 40: 'grape', 41: 'cherry',
+        42: 'pear', 43: 'cherry', 44: 'pear', 45: 'apple', 46: 'pear', 47: 'kiwi',
+        48: 'banana', 49: 'kiwi', 50: 'banana', 51: 'melon', 52: 'pineapple', 53: 'melon',
+        54: 'apple', 55: 'cucumber', 56: 'pineapple', 57: 'cucumber', 58: 'orange',
+        59: 'cucumber', 60: 'orange', 61: 'grape', 62: 'cherry', 63: 'apple', 64: 'cherry',
+        65: 'pear', 66: 'cherry', 67: 'pear', 68: 'kiwi', 69: 'pear', 70: 'kiwi', 71: 'banana',
+        72: 'apple', 73: 'banana', 74: 'melon', 75: 'pineapple', 76: 'melon', 77: 'pineapple',
+        78: 'cucumber', 79: 'pineapple', 80: 'cucumber', 81: 'apple', 82: 'grape', 83: 'orange',
+        84: 'grape', 85: 'cherry', 86: 'grape', 87: 'cherry', 88: 'pear', 89: 'cherry',
+        90: 'apple', 91: 'kiwi', 92: 'banana', 93: 'kiwi', 94: 'banana', 95: 'melon',
+        96: 'banana', 97: 'melon', 98: 'pineapple', 99: 'apple', 100: 'pineapple'}
+
+    
+   
+    # Convert the number to a string to iterate over its digits
+    a_string = str(numbers)
+
+    # Calculate the sum of digits
+    total = 0
+    for number in a_string:
+        total += int(number)
+    
+    # Subtract the sum from the number
+    result = numbers - total
+
+    # If the result is in the fruits dictionary, print the associated fruit
+    if result in fruits:
+        return fruits[result]
+    else:
+        # If not, recursively call the function with the new number
+        return subtract_sum(result)
+    
+    
+#print(subtract_sum(325))
+#print(subtract_sum(149))
+
+# Exercise 11: Square Every Digit
+def square_digits(numbers):
+    
+# Solution 1
+    
+    # Convert the number type INTEGER -> string
+    num_str = str(numbers)
+    # CREATE AN EMPTY STRING
+    new_str = ""
+    
+    # Loops each element of string
+    for number in num_str:
+    # Convert the number to an interger to calculate the square of its element.
+        new_str += str(int(number) ** 2)
+    
+    # Merge elements in a string and return a integer
+    return int("".join(new_str))
+    
+  
+# Solution 2: Use data type List
+    """
+    num_list = list(str(numbers))
+    # Use list comprehension to square each element in num_list that save a string
+    result = [str(int(number) ** 2) for number in num_list]
+    
+    return int("".join(result))
+  
+    """
+
+print(square_digits(9119))
+print(square_digits(765))
+
