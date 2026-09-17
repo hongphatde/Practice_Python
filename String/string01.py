@@ -258,7 +258,47 @@ def square_digits(numbers):
     return int("".join(result))
   
     """
+# Test case
+#print(square_digits(9119))
+#print(square_digits(765))
 
-print(square_digits(9119))
-print(square_digits(765))
+# Exercise 12: Remove element
+def remove_every_other(my_list):
+    # Create a new empty list 
+    list_new = []
+    # Iterable element 
+    for element in my_list[::2]:
+        list_new.append(element)
+    return list_new
+    
+# Solution 2: List comprehension
+    #return [element for element in my_list[::2]]
 
+# Test case
+#print(remove_every_other(['Hello', 'Goodbye', 'Hello Again']))
+#print(remove_every_other([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
+# Exercise 13: Invert values
+def invert(value_list):
+# Solution 1
+    # Create a new empty list
+    new_list = []
+    # Iterable number interger in list
+    for number in value_list:
+    # Change the sign of the number
+        new_list.append(-number)
+    return new_list
+    
+    
+# Solution 2: List comprehension
+    #return [-number for number in value_list]
+# Test case
+print(invert([1, -2, 3, -4, 5]))
+print(invert([1, 2, 3, 4, 5]))
+
+
+
+def remove(s):
+    return s[1:-2]
+
+print(remove('eloquent'))
