@@ -293,12 +293,17 @@ def invert(value_list):
 # Solution 2: List comprehension
     #return [-number for number in value_list]
 # Test case
-print(invert([1, -2, 3, -4, 5]))
-print(invert([1, 2, 3, 4, 5]))
+#print(invert([1, -2, 3, -4, 5]))
+#print(invert([1, 2, 3, 4, 5]))
 
 
-
-def remove(s):
-    return s[1:-2]
-
-print(remove('eloquent'))
+# Exercise 14: Do I get bonus?
+def bonus_time(salary, bonus):
+    if bonus:
+        return f"${salary * 10}"
+    else:
+        return f"${salary}"
+    
+print(bonus_time(10000, True))
+print(bonus_time(25000, True))
+    
