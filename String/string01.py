@@ -306,4 +306,15 @@ def bonus_time(salary, bonus):
     
 print(bonus_time(10000, True))
 print(bonus_time(25000, True))
-    
+print(bonus_time(300000, False))
+
+# Exercise 15: The Feast of Many Beasts
+def feast(beast, dish):
+    # Check the first and last characters of the two strings
+    return beast[0] == dish[0] and beast[-1] == dish[-1]
+
+# Test case
+print(feast("great blue heron", "garlic naan"))
+print(feast("chickadee", "chocolate cake"))
+print(feast("brown bear", "bear claw"))
+
