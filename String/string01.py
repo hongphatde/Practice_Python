@@ -303,10 +303,11 @@ def bonus_time(salary, bonus):
         return f"${salary * 10}"
     else:
         return f"${salary}"
-    
-print(bonus_time(10000, True))
-print(bonus_time(25000, True))
-print(bonus_time(300000, False))
+
+#Test case
+#print(bonus_time(10000, True))
+#print(bonus_time(25000, True))
+#print(bonus_time(300000, False))
 
 # Exercise 15: The Feast of Many Beasts
 def feast(beast, dish):
@@ -314,7 +315,27 @@ def feast(beast, dish):
     return beast[0] == dish[0] and beast[-1] == dish[-1]
 
 # Test case
-print(feast("great blue heron", "garlic naan"))
-print(feast("chickadee", "chocolate cake"))
-print(feast("brown bear", "bear claw"))
+#print(feast("great blue heron", "garlic naan"))
+#print(feast("chickadee", "chocolate cake"))
+#print(feast("brown bear", "bear claw"))
 
+# Exercise 16: You only need one - Beginner
+def check(array, element):
+    # Check element in array 
+    return element in array
+
+print(check([78, 117, 110, 99, 104, 117, 107, 115], 8))
+print(check(["what", "a", "great", "kata"], "kat"))
+print(check([101, 45, 75, 105, 99, 107], 107))
+
+# Exercise 17: Alan Partridge II - Apple Turnover
+def apple(x):
+    if int(x)**2 > 1000:
+        return "It's hotter than the sun!!"
+    return "Help yourself to a honeycomb Yorkie for the glovebox."
+
+# Test case
+print(apple('50'))
+print(apple(4))
+print(apple(60))
+print(apple("12"))
