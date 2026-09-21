@@ -324,9 +324,9 @@ def check(array, element):
     # Check element in array 
     return element in array
 
-print(check([78, 117, 110, 99, 104, 117, 107, 115], 8))
-print(check(["what", "a", "great", "kata"], "kat"))
-print(check([101, 45, 75, 105, 99, 107], 107))
+#print(check([78, 117, 110, 99, 104, 117, 107, 115], 8))
+#print(check(["what", "a", "great", "kata"], "kat"))
+#print(check([101, 45, 75, 105, 99, 107], 107))
 
 # Exercise 17: Alan Partridge II - Apple Turnover
 def apple(x):
@@ -335,7 +335,25 @@ def apple(x):
     return "Help yourself to a honeycomb Yorkie for the glovebox."
 
 # Test case
+"""
 print(apple('50'))
 print(apple(4))
 print(apple(60))
 print(apple("12"))
+"""
+# Exercise 18: Drink About
+def people_with_age_drink(age):
+    # Function use check the age to select the appropriate drink
+    if age < 14:
+        return "drink toddy"
+    elif 14 <= age < 18:
+        return "drink coke"
+    elif 18 <= age < 21:
+        return "drink beer"
+    return "drink whisky"
+
+# Test case
+print(people_with_age_drink(20))
+print(people_with_age_drink(14))
+print(people_with_age_drink(21))
+print(people_with_age_drink(18))
