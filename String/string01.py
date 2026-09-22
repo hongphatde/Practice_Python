@@ -353,7 +353,20 @@ def people_with_age_drink(age):
     return "drink whisky"
 
 # Test case
+"""
 print(people_with_age_drink(20))
 print(people_with_age_drink(14))
 print(people_with_age_drink(21))
 print(people_with_age_drink(18))
+"""
+
+# Exercise 19: Sort and Star
+def two_sort(array):
+    # Sort it alphabetically and return the first value
+    new_array = sorted(array)
+    return "***".join(new_array[0])
+
+# Test case
+print(two_sort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]))
+print(two_sort(["lets", "talk", "about", "javascript", "the", "best", "language"]))
+print(two_sort(["Lets", "all", "go", "on", "holiday", "somewhere", "very", "cold"]))
