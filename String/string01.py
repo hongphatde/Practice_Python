@@ -370,3 +370,12 @@ def two_sort(array):
 print(two_sort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]))
 print(two_sort(["lets", "talk", "about", "javascript", "the", "best", "language"]))
 print(two_sort(["Lets", "all", "go", "on", "holiday", "somewhere", "very", "cold"]))
+
+# Exercise 20: Grasshopper - Personalized Message
+def greet(name, owner):
+    if name == owner:
+        return 'Hello boss'
+    return 'Hello guest'
+
+print(greet('Daniel', 'Daniel'))
+print(greet('Greg', 'Daniel'))
