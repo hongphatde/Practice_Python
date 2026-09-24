@@ -377,5 +377,6 @@ def greet(name, owner):
         return 'Hello boss'
     return 'Hello guest'
 
+# Test case
 print(greet('Daniel', 'Daniel'))
 print(greet('Greg', 'Daniel'))
