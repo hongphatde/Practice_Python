@@ -15,7 +15,7 @@ print(make_count(5))
 print(make_count(1))
 print(make_count(10))
 """
-
+# Exercise 2
 def sorter(textbook):
 # Solution 1
     # Replace directly in the current list
@@ -37,6 +37,8 @@ print(sorter(['Algebra', 'history', 'Geometry', 'english']))
 print(sorter(['Algebra', 'History', 'Geometry', 'English']))
 print(sorter(['Alg#bra', '$istory', 'Geom^try', '**english']))
 """
+
+# Exercise 3
 def add_length(str_):
     list_words = str_.split()
     new_list = []
@@ -44,4 +46,60 @@ def add_length(str_):
         new_list.append(word + str(len(word)))
     return new_list
 
-print(add_length('you will win'))
+# print(add_length('you will win'))
+
+# Exercise 4: Count of positives / sum of negatives
+def count_positives_sum_negatives(arr):
+    # Create a count variable and a sum of variable
+    positive = 0
+    negative = 0
+    # If array don't have element return empty list
+    if not arr:
+        return []
+    # Loop each element
+    for number in arr:
+        # Check if the element is greater than zero.
+        if number > 0:
+            positive += 1
+        # Check if the element is less than zero.
+        elif number < 0:
+            negative += number
+        else:
+            continue
+    return [positive, negative]    
+
+# Test case
+print(count_positives_sum_negatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))
+print(count_positives_sum_negatives([0,0,0,0,0,0,0,0,0]))
+print(count_positives_sum_negatives([0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14]))
+print(count_positives_sum_negatives([]))
+
+
+# Exercise 5: Duck, Duck, Goose
+def duck_duck_goose(players, goose):
+    index = (goose - 1) % len(players)
+    return players[index].name
+
+# Exercise 6: Switch it Up!
+def switch_it_up(number):
+    match number:
+        case 0:
+            return "Zero"
+        case 1:
+            return "One"
+        case 2:
+            return "Two"
+        case 3:
+            return "Three"
+        case 4:
+            return "Four"
+        case 5:
+            return "Five"
+        case 6:
+            return "Six"
+        case 7:
+            return "Seven"
+        case 8:
+            return "Eight"
+        case 9:
+            return "Nine"
