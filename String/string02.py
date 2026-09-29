@@ -1,4 +1,4 @@
-# Exercise 1:
+# Exercise 1: Smart Log Formatter
 def smart_log_formatter(logs):
     if not logs:
         return []
@@ -24,7 +24,8 @@ def smart_log_formatter(logs):
         result.append(current)
     
     return result
-
+'''
+# Test case
 print(smart_log_formatter(
                 [
                     "INFO Connected",
@@ -39,3 +40,20 @@ print(smart_log_formatter(
                     "INFO Start"
                 ]
             ))
+'''
+
+# Exercise 2: 
+def cat_mouse(x):
+    # Create a count variable of character '.'
+    number_character = x.count('.')
+    # If '.' more than three characters between
+    if number_character > 3:
+        return "Escaped!"
+    # If there are three characters between the two, the cat can jump
+    return "Caught!"
+
+# Test case
+print(cat_mouse('C...m'))
+print(cat_mouse('C....m'))
+print(cat_mouse('C.m'))
+print(cat_mouse('Cm'))
