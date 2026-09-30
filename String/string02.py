@@ -52,8 +52,23 @@ def cat_mouse(x):
     # If there are three characters between the two, the cat can jump
     return "Caught!"
 
+'''
 # Test case
 print(cat_mouse('C...m'))
 print(cat_mouse('C....m'))
 print(cat_mouse('C.m'))
 print(cat_mouse('Cm'))
+'''
+
+# Exercise 3: AGE In days
+from datetime import date, timedelta
+def age_in_days(year, mon, days):
+    out = date.today() - date(year,mon, days)
+    return f'You are  {out.days} days old'
+
+today = date.today()
+bday = today - timedelta(days=2)
+print(age_in_days(bday.year, bday.month, bday.day))
+bday = today - timedelta(days=365)
+print(age_in_days(bday.year, bday.month, bday.day))
+
